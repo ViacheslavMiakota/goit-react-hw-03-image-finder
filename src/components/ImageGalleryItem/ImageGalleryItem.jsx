@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   ImageItem,
   Image,
@@ -24,3 +25,10 @@ const ImageGalleryItem = ({
   );
 };
 export default ImageGalleryItem;
+ImageGalleryItem.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  tags: PropTypes.string.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  selectImage: PropTypes.string.isRequired,
+};

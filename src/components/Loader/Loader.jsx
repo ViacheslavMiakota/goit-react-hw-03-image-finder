@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Dna } from 'react-loader-spinner';
 
 const Loader = isLoading => {
@@ -14,3 +15,7 @@ const Loader = isLoading => {
   );
 };
 export default Loader;
+
+Loader.propTypes = {
+  isLoading: PropTypes.func.isRequired,
+};

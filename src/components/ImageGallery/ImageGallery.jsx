@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery.styled';
 
@@ -20,3 +21,8 @@ const ImgGallery = ({ isLoading, selectImage, hits }) => {
 };
 
 export default ImgGallery;
+ImageGallery.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  hits: PropTypes.arrayOf.isRequired,
+  selectImage: PropTypes.string.isRequired,
+};

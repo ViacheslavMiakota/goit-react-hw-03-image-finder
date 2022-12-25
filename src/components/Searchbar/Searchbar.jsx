@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Button,
   SearchForm,
@@ -24,3 +25,6 @@ const Searchbar = ({ handleSubmit }) => {
 };
 
 export default Searchbar;
+Searchbar.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+};

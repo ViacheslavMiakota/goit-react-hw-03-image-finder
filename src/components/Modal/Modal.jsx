@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-// import { Overlay } from 'components/Modal/Modal.styled';
 const customStyles = {
   content: {
     top: '50%',
@@ -30,3 +30,8 @@ const ModalBox = ({ selectedImage, closeImage }) => {
   );
 };
 export default ModalBox;
+
+ModalBox.propTypes = {
+  selectedImage: PropTypes.string.isRequired,
+  closeImage: PropTypes.func.isRequired,
+};
