@@ -1,6 +1,5 @@
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Dna } from 'react-loader-spinner';
 
 import Searchbar from 'components/Searchbar/Searchbar';
 import { Container } from 'components/App/App.styled';
