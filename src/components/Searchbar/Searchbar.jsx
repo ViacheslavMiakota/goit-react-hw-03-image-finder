@@ -2,24 +2,24 @@ import React from 'react';
 import {
   Button,
   SearchForm,
-  SearchBar,
+  SearchBarHeader,
   SearchForInput,
 } from 'components/Searchbar/Searchbar.styled';
 
 const Searchbar = ({ handleSubmit }) => {
   return (
-    <SearchBar>
+    <SearchBarHeader>
       <SearchForm onSubmit={handleSubmit}>
         <Button type="submit">
           <span>Search</span>
         </Button>
         <SearchForInput
           type="text"
-          usname="query"
+          name="query"
           placeholder="Search images and photos"
         ></SearchForInput>
       </SearchForm>
-    </SearchBar>
+    </SearchBarHeader>
   );
 };
 

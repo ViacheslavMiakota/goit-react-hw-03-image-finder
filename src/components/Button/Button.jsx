@@ -1,10 +1,11 @@
 import React from 'react';
+import { LoadMoreButton } from 'components/Button/Button.styled';
 
 const Button = ({ loadMoreProp }) => {
   return (
-    <button type="button" onClick={loadMoreProp}>
+    <LoadMoreButton type="button" onClick={loadMoreProp}>
       Load more
-    </button>
+    </LoadMoreButton>
   );
 };
 export default Button;

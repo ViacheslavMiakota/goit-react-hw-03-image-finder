@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
-export const SearchBar = styled.header`
+export const SearchBarHeader = styled.header`
   top: 0;
   left: 0;
   position: sticky;
-  z-index: 1100;
+  /* z-index: 1100; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,6 @@ export const SearchForm = styled.form`
   max-width: 600px;
   background-color: #fff;
   border-radius: 4px;
-  overflow: hidden;
 `;
 export const SearchForInput = styled.input`
   display: inline-block;
