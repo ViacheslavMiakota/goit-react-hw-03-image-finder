@@ -34,10 +34,6 @@ class App extends React.Component {
           toast.success(`Nothing found for your request :${query}`);
           return;
         }
-        console.log(query.length);
-        if (!query.length) {
-          toast.success(`Write at least something`);
-        }
 
         this.setState(prevState => ({
           hits: [...prevState.hits, ...hits],
