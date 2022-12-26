@@ -6,7 +6,6 @@ import {
 } from 'components/ImageGalleryItem/ImageGalleryItem.styled';
 
 const ImageGalleryItem = ({
-  isLoading,
   tags,
   webformatURL,
   largeImageURL,
@@ -14,21 +13,18 @@ const ImageGalleryItem = ({
 }) => {
   return (
     <ImageItem>
-      {!isLoading && (
-        <Image
-          src={webformatURL}
-          alt={tags}
-          onClick={() => selectImage(largeImageURL)}
-        />
-      )}
+      <Image
+        src={webformatURL}
+        alt={tags}
+        onClick={() => selectImage(largeImageURL)}
+      />
     </ImageItem>
   );
 };
 export default ImageGalleryItem;
 ImageGalleryItem.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
   tags: PropTypes.string.isRequired,
   webformatURL: PropTypes.string.isRequired,
   largeImageURL: PropTypes.string.isRequired,
-  selectImage: PropTypes.string.isRequired,
+  selectImage: PropTypes.func.isRequired,
 };

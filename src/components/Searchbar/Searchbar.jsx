@@ -8,9 +8,16 @@ import {
 } from 'components/Searchbar/Searchbar.styled';
 
 const Searchbar = ({ handleSubmit }) => {
+  const onSubmit = event => {
+    event.preventDefault();
+    const query = event.target.elements.query.value.trim();
+    if (!query) return;
+    handleSubmit(query);
+    event.target.reset();
+  };
   return (
     <SearchBarHeader>
-      <SearchForm onSubmit={handleSubmit}>
+      <SearchForm onSubmit={onSubmit}>
         <Button type="submit">
           <span>Search</span>
         </Button>

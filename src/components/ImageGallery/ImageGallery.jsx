@@ -3,26 +3,24 @@ import PropTypes from 'prop-types';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery.styled';
 
-const ImgGallery = ({ isLoading, selectImage, hits }) => {
+const ImgGallery = ({ selectImage, hits }) => {
   return (
     <ImageGallery>
       {hits.map(hit => (
         <ImageGalleryItem
-          isLoading={isLoading}
           selectImage={selectImage}
           tags={hit.tags}
           key={hit.id}
           webformatURL={hit.webformatURL}
           largeImageURL={hit.largeImageURL}
-        />
+        ></ImageGalleryItem>
       ))}
     </ImageGallery>
   );
 };
 
 export default ImgGallery;
-ImageGallery.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
-  hits: PropTypes.arrayOf.isRequired,
-  selectImage: PropTypes.string.isRequired,
+ImgGallery.propTypes = {
+  hits: PropTypes.array.isRequired,
+  selectImage: PropTypes.func.isRequired,
 };

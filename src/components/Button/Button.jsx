@@ -12,5 +12,5 @@ const Button = ({ loadMoreProp }) => {
 export default Button;
 
 Button.propTypes = {
-  loadMorePro: PropTypes.func.isRequired,
+  loadMorePro: PropTypes.func,
 };
