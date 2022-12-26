@@ -43,6 +43,7 @@ class App extends React.Component {
       } catch (error) {
         toast.error('Something went wrong : Try reloading the page.');
       } finally {
+        this.setState({ loading: false });
       }
     }
   }
@@ -75,10 +76,10 @@ class App extends React.Component {
         <Container>
           <Searchbar handleSubmit={this.handleSubmit} />
           {loading && <Loader isLoading={loading} />}
-
           {hits.length > 0 && (
             <ImgGallery selectImage={this.selectImage} hits={hits} />
           )}
+
           {Boolean(totalHits) && totalHits !== hits.length && (
             <Button loadMoreProp={this.incrementImage} />
           )}

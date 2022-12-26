@@ -17,7 +17,6 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 const ModalBox = ({ selectedImage, closeImage }) => {
-  console.log(selectedImage);
   return (
     <Modal
       isOpen={selectedImage !== null}
